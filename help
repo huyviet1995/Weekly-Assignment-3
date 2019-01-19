@@ -1,0 +1,6 @@
+keytool -list -v -keystore PhotoMapApplication.jks
+  Keystore password: bae79318b0c642df9fa23d64aba2f810
+  Key alias:         QGh1eXZpZXQxOTk1L1Bob3RvTWFwQXBwbGljYXRpb24=
+  Key password:      b53dcce043f849afacb304e016805e7c
+
+API Key: AIzaSyC-dZ8LIIBztJJJyRNn36tRvXEaBagKgsQ
