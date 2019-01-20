@@ -6,8 +6,7 @@ import { Platform, Text, View, StyleSheet } from 'react-native';
 export class Map extends React.Component {
 
   constructor() {
-    super();
-    this.state = {
+    super(); this.state = {
       locations: [], 
     }
   }
@@ -34,11 +33,13 @@ export class Map extends React.Component {
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         }}>
-        {this.state.locations.map((location,index) => {
-          console.log("Here is the data after being fetched!");
-          console.log(location,index);
+        {this.state.locations.map((location) => {
           return (
-            <Marker coordinate = {location}></Marker>
+            <Marker coordinate = {{
+              longitude: location.longitude,
+              latitude: location.latitude
+            }}>
+            </Marker>
           )
         })}
       </MapView>
