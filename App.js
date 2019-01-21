@@ -4,13 +4,16 @@ import {Constants, Location, Permissions } from 'expo';
 import {Map} from './Map.js';
 
 export default class App extends React.Component {
-  state = {
-    locations: null,
-    location: null,
-    errorMessage: null,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      locations: null,
+      location: null,
+      errorMessage: "No error message here",
+    };
+  }
 
-componentWillMount() {
+  componentWillMount() {
     if (Platform.OS === 'android' && !Constants.isDevice) {
       this.setState({
         errorMessage: 'Oops, this will not work on Sketch in an Android emulator. Try it on your device!',

@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {MapView, ImagePicker} from 'expo';
 import {Image, Button, Platform, Text, View, StyleSheet } from 'react-native';
 
 export class Map extends React.Component {
-
-  constructor() {
-    super(); 
+  constructor(props) {
+    super(props); 
     this.state = {
       locations: [], 
       images: [],
     }
     this._pickImage = this._pickImage.bind(this);
   }
+
   // Debugging
   handlePress = (e) => {
     data = e.nativeEvent;
